@@ -4,10 +4,9 @@ class Uvm
       include ViewHelpers
 
       def title
-        @title || "Generic Page"
+        @title || "[No Title]"
       end
 
     end
   end
 end
-

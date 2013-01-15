@@ -1,0 +1,18 @@
+<h1>{{title}}</h1>
+
+<form method="POST" action="/programs/show">
+
+  <ul>
+      {{#program}}
+        <li> <strong>Title:</strong> <input type="text" value="{{title}}" /> </li>
+        <li> <strong>Description:</strong> <input type="text" value="{{description}}" /> </li>
+        <li> <strong>Starts At:</strong> <input type="text" value="{{starts_at}}" /> </li>
+        <li> <strong>Ends At:</strong> <input type="text" value="{{ends_at}}" /> </li>
+        <li> <strong>Inherits From:</strong> <input type="text" value="{{inherits_from}}" /> </li>
+        <li> <strong>Inherits State:</strong> <input type="text" value="{{inherits_state}}" /> </li>
+      {{/program}}
+  </ul>
+
+  <input type="submit" value="Update" />
+
+</form>

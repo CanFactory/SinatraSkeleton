@@ -40,17 +40,37 @@ class Uvm < Sinatra::Base
 
 
 
+
+
   get "/" do
-    @title = "Homepage"
-    @subtitle = "UVM POC One"
+    @title = "Index"
     mustache :index
   end
 
-  get '/nolayout' do
-    @subtitle = 'Title'
-    content_type 'text/plain'
-    mustache :nolayout, :layout => false
+
+  get "/programs/index" do
+    @title = "Programs#Index"
+    mustache :program_index
   end
+
+  get "/programs/show" do
+    @title = "Programs#Show"
+    mustache :program_show
+  end
+
+  get "/programs/new" do
+    @title = "Programs#New"
+    mustache :program_new
+  end
+
+  get "/programs/edit" do
+    @title = "Programs#Edit"
+    mustache :program_edit
+  end
+
+
+
+
 
 
 
